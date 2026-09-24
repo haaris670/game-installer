@@ -56,6 +56,7 @@
             border-radius: 4px;
             transition: background 0.3s ease, transform 0.2s ease;
             box-shadow: 0 4px 15px rgba(140, 0, 0, 0.4);
+            cursor: pointer; /* Makes the hand icon show up on hover */
         }
 
         .download-btn:hover {
@@ -83,8 +84,8 @@
         <h1>Cool Horror Game</h1>
         <p>A terrifying standalone desktop horror experience. Face your fears in full-screen immersion. Built using HTML5 and packaged with Electron.</p>
         
-        <!-- PASTE YOUR ZIP LINK IN THE HREF ATTRIBUTE BELOW -->
-        <a href="https://drive.google.com/file/d/1ogIymsUgesqHCL9ymCBM67v2FsDlws6Q/view?usp=sharing" class="download-btn">DOWNLOAD FOR WINDOWS</a>
+        <!-- Updated to use the Javascript function for direct Google Drive download -->
+        <a href="#" class="download-btn" onclick="downloadGame(event)">DOWNLOAD FOR WINDOWS</a>
 
         <div class="instructions">
             <h3>How to Play:</h3>
@@ -96,6 +97,20 @@
             </ol>
         </div>
     </div>
+
+    <!-- The Direct Download Logic -->
+    <script>
+    function downloadGame(event) {
+      event.preventDefault(); // Prevents page from jumping to top
+      
+      // Your exact Google Drive File ID extracted from your URL
+      const fileId = '1ogIymsUgesqHCL9ymCBM67v2FsDlws6Q'; 
+      const directDownloadUrl = 'https://google.com' + fileId;
+      
+      // Opens a background tab to instantly trigger the zip file download
+      window.open(directDownloadUrl, '_blank');
+    }
+    </script>
 
 </body>
 </html>
