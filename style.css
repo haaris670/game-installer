@@ -1,0 +1,223 @@
+/* ─── GLOBAL RESET & CORE SYSTEM FONT ─── */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ─── DARK PLATFORM BACKGROUND ─── */
+body {
+    background: #191B1D; /* Roblox dark theme core background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* ─── LOGIN PANEL CONTAINER CARD ─── */
+.login-container {
+    background: #2B2D2F; /* Card container dark fill block */
+    padding: 35px 30px;
+    border-radius: 4px; /* Hard square corners matching Roblox UI components */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #393B3D;
+}
+
+/* ─── GAME APP ICON FORMATTING ─── */
+.game-logo-wrapper {
+    margin-bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.launcher-app-icon {
+    width: 140px;        /* Safely constrains the 1254px width scale boundary */
+    height: 140px;       /* Keeps it an identical square height bounding grid */
+    object-fit: contain; /* Prevents distortion, handling your high-res asset cleanly */
+    border-radius: 16px; /* Gives the sharp 1254x1254 square clean, modern app-icon corners */
+    border: 2px solid #393B3D;
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.6);
+    background-color: #191B1D;
+    transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.launcher-app-icon:hover {
+    transform: scale(1.04); /* Interactive pop feedback loop */
+}
+
+/* Fallback square icon if image asset fails to fetch */
+.roblox-logo-placeholder {
+    font-size: 42px;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+    transform: rotate(-15deg);
+    display: inline-block;
+}
+
+/* ─── STYLING FOR THE TEXT BUTTON UNDER THE APP ICON ─── */
+.icon-sub-link {
+    color: #0084FF; /* Roblox blue link color accent */
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 5px;
+    transition: color 0.15s ease, text-decoration 0.15s ease;
+}
+
+.icon-sub-link:hover {
+    color: #0074E0;
+    text-decoration: underline; /* Standard interactive link mouse hover reaction loop */
+}
+
+/* ─── TYPOGRAPHY ─── */
+h2 {
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+p {
+    color: #BDC3C7;
+    margin-bottom: 24px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* ─── INPUT FIELDS & FORM PACKAGES ─── */
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 6px;
+    color: #BDC3C7; 
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    color: #FFFFFF;
+    background-color: #191B1D; 
+    border: 1px solid #55585A; 
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.input-group input:focus {
+    border-color: #FFFFFF; /* Highlights frame border selection loop */
+}
+
+/* ─── ROBLOX CORE NAVIGATION BUTTONS ─── */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #0084FF; /* Roblox premium actions blue links */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.15s ease;
+}
+
+.login-btn:hover {
+    background: #0074E0;
+}
+
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #0084FF;
+    color: #0084FF;
+}
+
+.secondary-btn:hover {
+    background: rgba(0, 132, 255, 0.1);
+}
+
+.success-btn {
+    background: #00B06F; /* Dark green install/download engine buttons */
+}
+
+.success-btn:hover {
+    background: #009E63;
+}
+
+#btn-logout, #btn-welcome-logout {
+    background: #F44336; /* Warning red disconnect flags */
+}
+
+#btn-logout:hover, #btn-welcome-logout:hover {
+    background: #D32F2F;
+}
+
+.signup-prompt {
+    margin-top: 24px;
+    font-size: 14px;
+    color: #BDC3C7;
+}
+
+.link-btn {
+    background: none;
+    border: none;
+    color: #0084FF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.link-btn:hover {
+    text-decoration: underline;
+}
+
+/* ─── ALERT VALIDATION ALERTS ─── */
+#error-message {
+    background-color: #3A1F22;
+    border: 1px solid #F44336;
+    color: #FF8A80;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+#success-message {
+    background-color: #1A3A2B;
+    border: 1px solid #00B06F;
+    color: #A7FFEB;
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* ─── USER DASHBOARD ELEMENT CARDS ─── */
+.profile-card {
+    background: #191B1D;
+    border: 1px solid #393B3D;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}

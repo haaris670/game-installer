@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corrupted Escape | Create Account</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="roblox-logo-placeholder">◽</div>
+        <h2>Create Account</h2>
+        <p style="font-size: 13px; margin-bottom: 15px;">Sign up to start exploring custom user storage systems.</p>
+        
+        <div id="error-message" style="display: none;"></div>
+        <div id="success-message" style="display: none;"></div>
+
+        <form id="signupForm">
+            <div class="input-group">
+                <label for="signup-email">Choose Username or Email</label>
+                <input type="text" id="signup-email" required placeholder="Minimum 3 characters">
+            </div>
+            <div class="input-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required placeholder="At least 4 characters">
+            </div>
+            <button type="submit" class="login-btn success-btn">Sign Up</button>
+        </form>
+
+        <div class="signup-prompt">
+            Already have an account? 
+            <a href="../login/login.html" class="link-btn">Sign In</a>
+        </div>
+    </div>
+
+    <script src="signup.js"></script>
+</body>
+</html>

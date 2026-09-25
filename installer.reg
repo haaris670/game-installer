@@ -1,0 +1,12 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\corrupted-escape]
+@="URL:Corrupted Escape Protocol"
+"URL Protocol"=""
+
+[HKEY_CLASSES_ROOT\corrupted-escape\shell]
+
+[HKEY_CLASSES_ROOT\corrupted-escape\shell\open]
+
+[HKEY_CLASSES_ROOT\corrupted-escape\shell\open\command]
+@="\"C:\\Program Files\\Corrupted Escape\\CorruptedEscape.exe\" \"%1\""

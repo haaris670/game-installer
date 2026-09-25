@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haaris670's Site | Sign In</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="roblox-logo-placeholder">◽</div>
+        <h2>Login to Suburban Secrets</h2>
+        
+        <!-- Alert placeholder wrapper for mismatched database query values -->
+        <div id="error-message" style="display: none;"></div>
+
+        <form id="customLoginForm">
+            <div class="input-group">
+                <label for="email">Username/Email</label>
+                <input type="text" id="email" required placeholder="Username/Email/Phone">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" required placeholder="Password">
+            </div>
+            <button type="submit" class="login-btn">Log In</button>
+        </form>
+
+        <div class="signup-prompt">
+            Don't have an account? 
+            <a href="../signup/signup.html" class="link-btn">Create one!</a>
+        </div>
+        <div style="margin-top: 15px;">
+            <a href="../index.html" class="link-btn" style="font-size: 13px; color: #b8b8b8;">← Go Back Home</a>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
